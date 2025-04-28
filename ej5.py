@@ -5,7 +5,7 @@ cap = cv2.VideoCapture(0)
 mode = 'gray'  # Modo inicial
 
 while True:
-    ret, frame = cap.read()
+    ret, frame = cap.read() # ret, true or false, frame (NONE, image)
     if not ret:
         break
 
@@ -26,5 +26,5 @@ while True:
     elif key == ord('r'):  # Modo RGB (en realidad BGR para OpenCV)
         mode = 'rgb'
 
-cap.release()
+cap.release() # cerrar correctamente la conexión con la cámara 
 cv2.destroyAllWindows()
